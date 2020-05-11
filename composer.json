@@ -1,0 +1,27 @@
+{
+  "name": "dazzle/behat-drupal-translations",
+  "type": "behat-extension",
+  "description": "Allows you to use the original interface string in Drupal without worrying about the current language.",
+  "version": "1.0.0-dev",
+  "keywords": ["drupal", "behat", "extension", "bdd"],
+  "license": "GPLv2+",
+  "authors": [
+    {
+      "name": "Olivier Jacquet",
+      "email": "olivier.jacquet@dazzle.be"
+    },
+    {
+      "name": "Kevin Thiels",
+      "email": "kevin.thiels@dazzle.be"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "Dazzle\\DrupalTranslations\\": "src/"
+    }
+  },
+  "require": {
+    "php": ">=7.2",
+    "drupal/drupal-extension": "~4.0"
+  }
+}

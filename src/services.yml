@@ -1,0 +1,7 @@
+services:
+  transformation.argument_transformer.dt:
+    class: Dazzle\DrupalTranslations\Service\ArgumentTransformer
+    arguments:
+      - '@mink'
+    tags:
+      -  { name: transformation.argument_transformer, priority: 100 }
