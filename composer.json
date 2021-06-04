@@ -4,7 +4,7 @@
   "description": "Allows you to use the original interface string in Drupal without worrying about the current language.",
   "version": "1.0.0-dev",
   "keywords": ["drupal", "behat", "extension", "bdd"],
-  "license": "GPLv2+",
+  "license": "GPL-2.0-or-later",
   "authors": [
     {
       "name": "Olivier Jacquet",
