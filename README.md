@@ -19,6 +19,7 @@ Example steps:
 ...
 And I press the "Pay|t" button
 Then I should see the heading "Payment confirmation|t"
+Then I should see the error message "Payment amount should be greater that @amount|1.000|t"
 ...
 ```
 In the background this extension will use the current language and 
