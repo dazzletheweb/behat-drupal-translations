@@ -42,7 +42,7 @@ class ArgumentTransformer implements ArgumentTransformerInterface {
         $translation_context = '';
         if ($parts[0] && $context = explode('#', $parts[0])) {
             $parts[0] = $context[0];
-            $translation_context = $context[1];
+            $translation_context = isset($context[1]) ?? $context[1];
         }
         if (count($parts) > 1) {
             $matches = [];
