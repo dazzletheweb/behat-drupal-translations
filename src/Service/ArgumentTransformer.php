@@ -39,6 +39,11 @@ class ArgumentTransformer implements ArgumentTransformerInterface {
 
         $arguments = [];
         $parts = explode('|', $argumentValue);
+        $translation_context = '';
+        if ($parts[0] && $context = explode('#', $parts[0])) {
+            $parts[0] = $context[0];
+            $translation_context = $context[1];
+        }
         if (count($parts) > 1) {
             $matches = [];
             if (preg_match_all('/(@|%)\w+/', $parts[0], $matches)) {
@@ -63,7 +68,7 @@ class ArgumentTransformer implements ArgumentTransformerInterface {
             $langcode = $langcode_from_url;
         }
 
-        $string = new TranslatableMarkup($argumentValue, $arguments, ['langcode' => $langcode]);
+        $string = new TranslatableMarkup($argumentValue, $arguments, ['langcode' => $langcode, 'context' => $translation_context]);
         $string = $string->render();
         $string = strip_tags($string);
 
