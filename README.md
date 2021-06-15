@@ -5,7 +5,7 @@ translate interface into your steps.
 ## Installation
 Installation through composer:
 ```
-composer require dazzle/behat-drupal-translations
+composer require dazzle/behat-drupal-translations:dev-develop
 ```
 
 ## Usage
