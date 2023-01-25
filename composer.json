@@ -22,6 +22,6 @@
   },
   "require": {
     "php": ">=7.2",
-    "drupal/drupal-extension": "~4.0"
+    "drupal/drupal-extension": "v5.0.0alpha1"
   }
 }
