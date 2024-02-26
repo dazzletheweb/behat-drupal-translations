@@ -3,7 +3,7 @@
   "type": "behat-extension",
   "description": "Allows you to use the original interface string in Drupal without worrying about the current language.",
   "version": "1.0.0-dev",
-  "keywords": ["drupal", "behat", "extension", "bdd"],
+  "keywords": ["drupal", "behat", "extension", "bdd", "testing"],
   "license": "GPL-2.0-or-later",
   "authors": [
     {
@@ -22,6 +22,6 @@
   },
   "require": {
     "php": ">=7.2 || >=8.0",
-    "drupal/drupal-extension": "v5.0.0alpha1"
+    "drupal/drupal-extension": "^v5"
   }
 }
