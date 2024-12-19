@@ -60,12 +60,14 @@ class ArgumentTransformer implements ArgumentTransformerInterface {
 
         $langcode = \Drupal::languageManager()->getCurrentLanguage()->getId();
 
+        // Try to get the language from the URL.
         $url = explode('/', trim($url, '/'));
-        $langcode_from_url = $url[3];
-        $lang_exists = \Drupal::languageManager()->getLanguage($langcode_from_url);
-
-        if (is_object($lang_exists)) {
-            $langcode = $langcode_from_url;
+        $langcode_from_url = $url[3] ?? NULL;
+        if ($langcode_from_url) {
+            $lang_exists = \Drupal::languageManager()->getLanguage($langcode_from_url);
+            if ($lang_exists && is_object($lang_exists)) {
+                $langcode = $langcode_from_url;
+            }
         }
 
         $string = new TranslatableMarkup($argumentValue, $arguments, ['langcode' => $langcode, 'context' => $translation_context]);
